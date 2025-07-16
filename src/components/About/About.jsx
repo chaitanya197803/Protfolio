@@ -1,6 +1,7 @@
 import React from 'react'
-import ReactTypingEffect from 'react-typing-effect'
 import Typewriter from 'typewriter-effect';
+import Tilt from "react-parallax-tilt";
+import aboutImage from "../../assets/aboutImage.png"
 
 const About = () => {
   return (
@@ -51,16 +52,15 @@ const About = () => {
 
           {/* About me Paragraph  */}
           <p className='text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptas
-            minus voluptates cupiditate eligendi nostrum. Quisquam voluptate ipsa iusto temporibus
-            debitis, sunt obcaecati laboriosam facilis similique cupiditate maxime recusandae praesentium
-            aspernatur, numquam ipsum dolore earum pariatur nobis repellendus. Dolores commodi similique
-            laborum iusto vel dicta quae iure voluptatibus exercitationem inventore!
+            I am a full-stack developer with over 2 years of experience in building scalable 
+            web applications. Skilled in both front-end and back-end development, I specialize 
+            in the MERN stack and other modern technologies to create seamless user experiences 
+            and efficient solutions.
           </p>
 
           {/* Resume Button  */}
           <a
-            href="/path/to/your-cv.pdf" // <-- Replace with your actual CV file path or external URL
+            href="https://drive.google.com/file/d/12U0L7IZxdu4siyLGAwN8dR1OOL4sOpDB/view?usp=drive_link" // <-- Replace with your actual CV file path or external URL
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
@@ -74,7 +74,15 @@ const About = () => {
         </div>
 
         {/* Right Side  */}
-        
+            <div className='md:w-1/2 flex justify-center md:justify-end'>
+              <img 
+              src={aboutImage} 
+              alt="Chaitanya Garg" 
+              className='w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]'
+              />
+            </div>
+
+            
       </div>
     </section>
   )

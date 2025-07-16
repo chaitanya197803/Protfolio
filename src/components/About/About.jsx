@@ -23,17 +23,17 @@ const About = () => {
           {/* skills hedding with typing effect */}
           <h3 className='text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight'>
             <span className='flex text-white'>
-              I am a 
+              I am a
               <span className="flex text-[#8245ec]">
                 <p>&nbsp;</p>
-              <Typewriter
-                options={{
-                  strings: ['React Developer', 'UI/UX Designer', 'Freelancer'],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </span>
+                <Typewriter
+                  options={{
+                    strings: ['React Developer', 'UI/UX Designer', 'Freelancer'],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </span>
             </span>
 
             {/* <ReactTypingEffect text={['Web Devloper','Frontend Developer','Backend Developer']}
@@ -46,7 +46,7 @@ const About = () => {
           )}
           ></ReactTypingEffect> */}
 
-            
+
           </h3>
 
           {/* About me Paragraph  */}
@@ -58,7 +58,23 @@ const About = () => {
             laborum iusto vel dicta quae iure voluptatibus exercitationem inventore!
           </p>
 
+          {/* Resume Button  */}
+          <a
+            href="/path/to/your-cv.pdf" // <-- Replace with your actual CV file path or external URL
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
+            style={{
+              background: 'linear-gradient(90deg, #8245ec, #a855f7)',
+              boxShadow: '0 0 2px #8245ec, 0 0 40px #8245ec'
+            }}
+          >
+            DOWNLOAD CV
+          </a>
         </div>
+
+        {/* Right Side  */}
+        
       </div>
     </section>
   )

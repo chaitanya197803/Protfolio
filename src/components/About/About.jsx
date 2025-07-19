@@ -29,7 +29,7 @@ const About = () => {
                 <p>&nbsp;</p>
                 <Typewriter
                   options={{
-                    strings: ['React Developer', 'UI/UX Designer', 'Freelancer'],
+                    strings: ['Software Engineer', 'React Developer', 'UI/UX Designer', 'Freelancer'],
                     autoStart: true,
                     loop: true,
                   }}
@@ -47,12 +47,11 @@ const About = () => {
           )}
           ></ReactTypingEffect> */}
 
-
           </h3>
 
           {/* About me Paragraph  */}
           <p className='text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed'>
-            I am a full-stack developer with over 2 years of experience in building scalable 
+            I am a full-stack developer with over 1 years of experience in building scalable 
             web applications. Skilled in both front-end and back-end development, I specialize 
             in the MERN stack and other modern technologies to create seamless user experiences 
             and efficient solutions.

@@ -37,7 +37,7 @@ const About = () => {
               </span>
             </span>
 
-            {/* <ReactTypingEffect text={['Web Devloper','Frontend Developer','Backend Developer']}
+          {/* <ReactTypingEffect text={['Web Devloper','Frontend Developer','Backend Developer']}
           speed={100}
           eraseSpeed={50}
           typingDelay={500}

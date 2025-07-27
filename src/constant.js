@@ -44,6 +44,11 @@ import glaLogo from './assets/education_logo/gla_logo.png';
 import bsaLogo from './assets/education_logo/bsa_logo.png';
 import vpsLogo from './assets/education_logo/vps_logo.png';
 
+import wbse from './assets/education_logo/wbse.png';
+import cgbse from './assets/education_logo/cgbse.jpeg';
+import rungta from './assets/education_logo/rungta.jpeg';
+import ggv from './assets/education_logo/ggv.png';
+
 // Project Section Logo's
 import githubdetLogo from './assets/work_logo/github_det.png';
 import csprepLogo from './assets/work_logo/cs_prep.png';
@@ -173,39 +178,39 @@ export const SkillsInfo = [
   export const education = [
     {
       id: 0,
-      img: glaLogo,
-      school: "GLA University, Mathura",
-      date: "Sept 2022 - July 2024",
+      img: ggv,
+      school: "Guru Ghasidas University",
+      date: "Sept 2024 - May 2026",
       grade: "7.81 CGPA",
-      desc: "I have completed my Master's degree (MCA) in Computer Applications from GLA University, Mathura. During my time at GLA, I gained a strong foundation in programming, software development, and computer science principles. I have studied courses such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Web Development, and Software Engineering. I actively participated in various workshops and technical events, which enhanced my skills and knowledge. My experience at GLA University has been instrumental in shaping my technical abilities and professional growth.",
+      desc: "I have completed my Master's degree (MCA) in Computer Applications from Guru Ghasidas University, Bilaspur. During my time at GGU, I gained a strong foundation in programming, software development, and computer science principles. I have studied courses such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Web Development, and Software Engineering. I actively participated in various workshops and technical events, which enhanced my skills and knowledge.",
       degree: "Master of Computer Applications - MCA",
     },
     {
       id: 1,
-      img: bsaLogo,
-      school: "BSA College, Mathura",
-      date: "Sept 2018 - Aug 2021",
+      img: rungta,
+      school: "GD RCET Bhilai",
+      date: "Sept 2021 - Aug 2024",
       grade: "73.2%",
-      desc: "I completed my Bachelor's degree in Computer Science (B.Sc.) from BSA College, Mathura. Throughout my studies, I was immersed in a variety of subjects that deepened my understanding of computing and technology. From exploring Data Structures and Algorithms to diving into Web Development and Database Management Systems, I gained practical insights into the world of software development. My time at BSA College allowed me to work on projects that applied theoretical concepts to real-world problems.",
-      degree: "Bachelor of Science - BSC (Computer Science)",
+      desc: "I completed my Bachelor's degree in Computer Science and Application (BCA) from Rungta College of Science and Technology, Bhilai. Throughout my studies, I was immersed in a variety of subjects that deepened my understanding of computing and technology. From exploring Web Development Technology to diving into Web Development and Database Management Systems, I gained practical insights into the world of software development.",
+      degree: "Bachelor of Computer Application (BCA)",
     },
     {
       id: 2,
-      img: vpsLogo,
-      school: "Vatsalya Public School Govardhan, Mathura",
-      date: "Apr 2017 - March 2018",
+      img: cgbse,
+      school: "Vardhman Gurukul Public School",
+      date: "Apr 2020 - March 2021",
       grade: "78%",
-      desc: "I completed my class 12 education from Vatsalya Public School, Govardhan, under the CBSE board, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science.",
-      degree: "CBSE(XII) - PCM with Computer Science",
+      desc: "I completed my class 12 education from Vardhman Gurukul Public School, Durg, under the CGBSE board.",
+      degree: "CGBSE (XII) CHHATTISGARH",
     },
     {
       id: 3,
-      img: vpsLogo,
-      school: "Vatsalya Public School Govardhan, Mathura",
-      date: "Apr 2015 - March 2016",
+      img: wbse,
+      school: "Burnpur Boy's High School",
+      date: "Apr 2018 - March 2019",
       grade: "87.5%",
-      desc: "I completed my class 10 education from Vatsalya Public School, Govardhan, under the CBSE board, where I studied Science with Computer.",
-      degree: "CBSE(X), Science with Computer Application",
+      desc: "I completed my class 10 education from Burnpur Boy's High School, Burnpur, under the WBBSE board, where I studied Science with Computer.",
+      degree: "WBBSE (X) WEST BENGAL",
     },
   ];
   

@@ -27,7 +27,7 @@ const Education = () => {
         {education.map((education, index) => (
           <div
             key={education.id}
-            className={`flex flex-col sm:flex-row items-center mb-16 ${index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"}`}
+            className={`flex flex-col sm:flex-row items-center mb-16 ${index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"}`}
           >
             {/* Timeline Circle */}
             {/* <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
@@ -46,11 +46,11 @@ const Education = () => {
               {/* Flex container for image and text */}
               <div className="flex items-center space-x-6">
                 {/* Company Logo/Image */}
-                <div className="w-28 h-18 bg-white rounded-md overflow-hidden">
+                <div className="w-30 h-22 bg-white rounded-md overflow-hidden">
                   <img
                     src={education.img}
                     alt={education.degree}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
 

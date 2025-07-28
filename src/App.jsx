@@ -1,5 +1,5 @@
 import React from 'react'
-import About from './components/About/about'
+import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import Education from './components/Education/Education'
 import Experience from './components/Experience/Experience'
@@ -8,7 +8,7 @@ import NavBar from './components/NavBar/NavBar'
 import Skills from './components/Skills/Skills'
 import Work from './components/Work/Work'
 import BlurBlob from './blurBlob'
-
+// const AboutSection = React.lazy(() => import('./components/About/about'));
 function App() {
   return (
     <>

@@ -5,7 +5,8 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2 "
+      // className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2 "
+      className='py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans relative'
     >
       {/* Section Title */}
       <div className="text-center mb-16">
@@ -13,7 +14,7 @@ const Education = () => {
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
         <p className="text-gray-400 mt-4 text-xl font-semibold">
           My education has been a journey of learning and development.
-          Here are the details of my academic background
+          Here are the details of my academic background.
         </p>
       </div>
 

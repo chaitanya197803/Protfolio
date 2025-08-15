@@ -215,36 +215,36 @@ export const SkillsInfo = [
   ];
   
   export const projects = [
-    {
-      id: 0,
-      title: "GitHub Profile Detective",
-      description:
-        "A powerful and user-friendly React.js application designed to uncover and showcase detailed GitHub profile information. Simply enter a GitHub username, and the app fetches comprehensive data, including profile stats, repositories, followers, and contributions. The intuitive interface ensures a seamless experience, making it a must-visit tool for developers and recruiters.",
-      image: githubdetLogo,
-      tags: ["HTML", "CSS", "JavaScript", "React JS", "API"],
-      github: "https://github.com/codingmastr/GitHub-Profile-Search-App-Using-React-JS",
-      webapp: "https://githubprofiledetective.netlify.app/",
-    },
-    {
-      id: 1,
-      title: "CS Prep",
-      description:
-        "A full-stack quiz-based platform designed for GATE/UGC NET students to practice previous year questions and create customized tests. The platform offers comprehensive profile stats and detailed results, helping students track and improve their preparation journey effectively.",
-      image: csprepLogo,
-      tags: ["React JS", "Node.js", "MongoDB", "Express", "HTML", "CSS", "JavaScript"],
-      github: "https://github.com/codingmastr/CSPrep",
-      webapp: "https://csprep.netlify.app/",
-    },
-    {
-      id: 2,
-      title: "Movie Recommendation App",
-      description:
-        "A React-based web application that provides movie recommendations based on different criteria, such as genres, user preferences, and popular trends. The intuitive design and smooth experience make it a go-to app for movie enthusiasts.",
-      image: movierecLogo,
-      tags: ["React JS", "API", "HTML", "CSS", "JavaScript"],
-      github: "https://github.com/codingmastr/Movie-Recommendation-App",
-      webapp: "https://movie-recommendation-app-jet.vercel.app/",
-    },
+    // {
+    //   id: 0,
+    //   title: "GitHub Profile Detective",
+    //   description:
+    //     "A powerful and user-friendly React.js application designed to uncover and showcase detailed GitHub profile information. Simply enter a GitHub username, and the app fetches comprehensive data, including profile stats, repositories, followers, and contributions. The intuitive interface ensures a seamless experience, making it a must-visit tool for developers and recruiters.",
+    //   image: githubdetLogo,
+    //   tags: ["HTML", "CSS", "JavaScript", "React JS", "API"],
+    //   github: "https://github.com/codingmastr/GitHub-Profile-Search-App-Using-React-JS",
+    //   webapp: "https://githubprofiledetective.netlify.app/",
+    // },
+    // {
+    //   id: 1,
+    //   title: "CS Prep",
+    //   description:
+    //     "A full-stack quiz-based platform designed for GATE/UGC NET students to practice previous year questions and create customized tests. The platform offers comprehensive profile stats and detailed results, helping students track and improve their preparation journey effectively.",
+    //   image: csprepLogo,
+    //   tags: ["React JS", "Node.js", "MongoDB", "Express", "HTML", "CSS", "JavaScript"],
+    //   github: "https://github.com/codingmastr/CSPrep",
+    //   webapp: "https://csprep.netlify.app/",
+    // },
+    // {
+    //   id: 2,
+    //   title: "Movie Recommendation App",
+    //   description:
+    //     "A React-based web application that provides movie recommendations based on different criteria, such as genres, user preferences, and popular trends. The intuitive design and smooth experience make it a go-to app for movie enthusiasts.",
+    //   image: movierecLogo,
+    //   tags: ["React JS", "API", "HTML", "CSS", "JavaScript"],
+    //   github: "https://github.com/codingmastr/Movie-Recommendation-App",
+    //   webapp: "https://movie-recommendation-app-jet.vercel.app/",
+    // },
     {
       id: 3,
       title: "Email Validator NPM Package",

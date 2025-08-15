@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer'
 import NavBar from './components/NavBar/NavBar'
 import Skills from './components/Skills/Skills'
 import Work from './components/Work/Work'
-import BlurBlob from './blurBlob'
+import BlurBlob from './components/BlurBlob'
 // const AboutSection = React.lazy(() => import('./components/About/about'));
 function App() {
   return (

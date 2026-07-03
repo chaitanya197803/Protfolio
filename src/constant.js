@@ -119,6 +119,22 @@ export const SkillsInfo = [
 ];
 
   export const experiences = [
+    {
+      id: 0,
+      img: null,
+      role: "Software Developer",
+      company: "Advance International",
+      date: "January 2026 - Present",
+      desc: "Working as a Software Developer, building and maintaining full-stack web applications using the MERN stack. Developing scalable APIs with Node.js and Express, building dynamic user interfaces with React and Tailwind CSS, and managing MongoDB databases. Collaborating with cross-functional teams to deliver high-quality, production-ready software solutions.",
+      skills: [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "Tailwind CSS",
+      ],
+      isCurrent: true,
+    },
     // {
     //   id: 0,
     //   img: webverseLogo,

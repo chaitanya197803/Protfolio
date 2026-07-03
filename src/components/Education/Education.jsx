@@ -1,90 +1,110 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { education } from '../../constant'
+import { FaGraduationCap } from 'react-icons/fa'
 
 const Education = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-up');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = sectionRef.current?.querySelectorAll('.reveal');
+    elements?.forEach((el) => observer.observe(el));
+
+    return () => elements?.forEach((el) => observer.unobserve(el));
+  }, []);
+
   return (
     <section
       id="education"
-      // className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2 "
-      className='py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans relative'
+      ref={sectionRef}
+      className='py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans relative'
     >
       {/* Section Title */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">EDUCATION</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-xl font-semibold">
+      <div className="text-center mb-16 reveal opacity-0">
+        <p className="text-sm tracking-[0.3em] uppercase text-purple-400 mb-3 font-medium">My Journey</p>
+        <h2 className="text-3xl sm:text-4xl font-bold gradient-text inline-block">EDUCATION</h2>
+        <div className="w-32 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 mx-auto mt-4 rounded-full section-line"></div>
+        <p className="text-gray-400 mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
           My education has been a journey of learning and development.
           Here are the details of my academic background.
         </p>
       </div>
 
-
-      {/* Experience Timeline */}
+      {/* Education Timeline */}
       <div className="relative">
-        {/* Vertical line */}
-        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-white h-full"></div>
+        {/* Vertical line with gradient */}
+        <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 w-[2px] h-full bg-gradient-to-b from-purple-500/80 via-indigo-500/50 to-transparent"></div>
 
-        {/* Experience Entries */}
-        {education.map((education, index) => (
+        {/* Education Entries */}
+        {education.map((edu, index) => (
           <div
-            key={education.id}
-            className={`flex flex-col sm:flex-row items-center mb-16 ${index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"}`}
+            key={edu.id}
+            className={`reveal opacity-0 flex flex-col sm:flex-row items-start sm:items-center mb-12 relative ${
+              index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
+            }`}
+            style={{ animationDelay: `${index * 200}ms` }}
           >
-            {/* Timeline Circle */}
-            {/* <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
-                    <img
-                      src={experience.img}
-                      alt={experience.company}
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </div> */}
+            {/* Timeline Dot */}
+            <div className="absolute left-4 sm:left-1/2 transform -translate-x-1/2 z-10">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-500/20">
+                <FaGraduationCap className="text-white text-sm" />
+              </div>
+            </div>
 
-            {/* Content Section */}
+            {/* Content Card */}
             <div
-              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
-                } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
+              className={`w-full sm:w-[calc(50%-3rem)] ml-14 sm:ml-0 ${
+                index % 2 === 0 ? "sm:pr-12" : "sm:pl-12 sm:ml-auto"
+              }`}
             >
-              {/* Flex container for image and text */}
-              <div className="flex items-center space-x-6">
-                {/* Company Logo/Image */}
-                <div className="w-30 h-22 bg-white rounded-md overflow-hidden">
-                  <img
-                    src={education.img}
-                    alt={education.degree}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+              <div className="glass-card p-6 sm:p-8 rounded-2xl group cursor-default">
+                {/* Header with logo */}
+                <div className="flex items-center space-x-4 mb-4">
+                  {/* School Logo */}
+                  <div className="w-14 h-14 bg-white rounded-xl overflow-hidden flex items-center justify-center shrink-0">
+                    <img
+                      src={edu.img}
+                      alt={edu.school}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
 
-                {/* Role, Company Name, and Date */}
-                <div className="flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-white">
-                      {education.degree}
+                  {/* Degree & School */}
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300">
+                      {edu.degree}
                     </h3>
-                    <h4 className="text-md sm:text-sm text-gray-300">
-                      {education.school}
+                    <h4 className="text-sm text-gray-400">
+                      {edu.school}
                     </h4>
                   </div>
-                  {/* Date at the bottom */}
-                  <p className="text-sm text-gray-500 mt-2">{education.date}</p>
                 </div>
+
+                {/* Date & Grade */}
+                <div className="flex items-center gap-2 mb-4 flex-wrap">
+                  <span className="text-xs text-gray-500 bg-white/5 px-3 py-1 rounded-full border border-gray-700/50">
+                    {edu.date}
+                  </span>
+                  <span className="text-xs text-purple-300 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">
+                    {edu.grade}
+                  </span>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {edu.desc}
+                </p>
               </div>
-
-              <p className="mt-4 text-gray-400">{education.desc}</p>
-              {/* <div className="mt-4">
-                <h5 className="font-medium text-white">Skills:</h5>
-                <ul className="flex flex-wrap mt-2">
-                  {experience.skills.map((skill, index) => (
-                    <li
-                      key={index}
-                      className="bg-[#8245ec] text-gray-300 px-4 py-1 text-xs sm:text-sm rounded-lg mr-2 mb-2 border border-gray-400"
-                    >
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </div> */}
-
             </div>
           </div>
         ))}
